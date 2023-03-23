@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Roboto:wght@300;500&display=swap" rel="stylesheet"> 
+
+    <script src="https://kit.fontawesome.com/b20461f515.js" crossorigin="anonymous"></script>
+    
+    <title>E-Bidding | Početna</title>
+</head>
+<body class="primary flex column">
+
+    <nav class="flex row space-between" id="main-nav">
+        <div class="logo">
+            <a href="welcome_page.html">E-Bidding</a>
+        </div>
+        <ul class="links flex row no-list-style">
+            <li><a href="account_setting.html"> <i class="fa-solid fa-gear"></i> Podešavanja Naloga</a></li>
+            <li><a href="auction_create.html"> <i class="fa-solid fa-wand-magic-sparkles"></i> Kreiraj Aukciju</a></li>
+            <li><a href="user_auctions.html"> <i class="fa-solid fa-database"></i> Moje Aukcije</a></li>
+            <li><a href="buy_tokens.html"><i class="fa-solid fa-cart-shopping"></i> Kupovina Tokena </a></li>
+            
+            <li><a href="login.html"><i class="fa-solid fa-door-open"></i> Odjava</a></li>
+            <li><i class="fa-solid fa-user"></i> Pera Perić</li>
+        </ul>
+        </div>
+    </nav>
+
+
+    <section id="form-section" class="flex column flex-center main-content">
+
+        <h1>Unesite detalje vase aukcije</h1>
+
+        <form action="user.html" class="flex column flex-center">
+
+            <div class="form-field">
+                <label for="naziv-predmeta">Naziv predmeta</label>
+                <input type="text" name="naziv-predmeta" id="naziv-predmeta">
+            </div>
+
+            <div class="form-field">
+                <label for="slika-predmeta">Slika predmeta</label>
+                <input type="file" name="slika-predmeta" id="slika-predmeta">
+            </div>
+
+            <div class="form-field">
+                <label for="opis-proizvoda">Opis proizvoda</label>
+                <textarea name="opis-proizvoda" id="opis-proizvoda" cols="30" rows="10"></textarea>
+            </div>
+
+            <div class="form-field">
+                <label for="vreme-trajanja">Rok Trajanja</label>
+                <input type="datetime-local" name="vreme-trajanja" id="vreme-trajanja">
+            </div>
+
+            <div class="form-field">
+                <label for="pocetna-cena">Pocetna Cena</label>
+                <input type="number" name="pocetna-cena" id="pocetna-cena">
+            </div>
+
+            <div class="form-field" id="form-submit">
+                <input type="submit" value="Kreiraj Aukciju">
+            </div>
+            
+        </form>
+    
+    </section>
+
+
+    <footer id="main-footer" class="flex column">		
+        <div>
+            <i class="fa-solid fa-map-marker"></i>
+            <span>&nbsp;Adresa organizacije</span>
+        </div>
+        
+        <div>
+            <i class="fa-solid fa-phone"></i>
+            <span>&nbsp;+381 6* *** ** **</span>
+        </div>
+        
+        <div>
+            <i class="fa-solid fa-envelope"></i>
+            <span>&nbsp;kontakt@ebidding.rs</span>
+        </div>
+        <hr>
+        <div id="copyright">© 2023, The Three Musketeers</div>
+    </footer>
+    
+</body>
+</html>

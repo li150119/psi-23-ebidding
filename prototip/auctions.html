@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Roboto:wght@300;500&display=swap" rel="stylesheet"> 
+
+    <script src="https://kit.fontawesome.com/b20461f515.js" crossorigin="anonymous"></script>
+    
+    <title>E-Bidding | Početna</title>
+</head>
+<body class="primary flex column">
+
+    <nav class="flex row space-between" id="main-nav">
+        <div class="logo">
+            <a href="welcome_page.html">E-Bidding</a>
+        </div>
+        <ul class="links flex row no-list-style">
+            <li><a href="welcome_page.html">Početna</a></li>
+            <li><a href="auctions.html">Aukcije</a></li>
+            <li><a href="login.html">Uloguj se</a></li>
+            <li><a href="register.html">Registruj se</a></li>
+        </ul>
+        </div>
+    </nav>
+
+
+    <section class="main-content">
+
+        <form action="auctions.html" id="auction-search-form">
+            <h1>Pretraga Aukcija</h1>
+            <div class="auction-search-form-field form-field">
+                <label for="">Naziv Artikla</label>
+                <input type="text">
+            </div>
+            <div class="auction-search-form-field form-field">
+                <label for="">Cena Od</label>
+                <input type="text" name="" id="">
+            </div>
+            <div class="auction-search-form-field form-field">
+                <label for="">Cena Do</label>
+                <input type="text">
+            </div>
+            <div class="auction-search-form-field" id="auction-status-radio">
+                <label for="open">Otvorena</label>
+                <input type="radio" name="auction-status" id="open" value="open">
+                <label for="closed">Zavrsena</label>
+                <input type="radio" name="auction-status" id="closed" value="closed">
+                <label for="expired">Istekla</label>
+                <input type="radio" name="auction-status" id="expired" value="expired">
+            </div>
+            <div class="auction-search-form-field auction-search-button">
+                <input type="submit" value="Primeni">
+            </div>
+        </form>
+
+        <section id="all-auction-view" class="flex row">
+
+            <article class="auction-item-small flex row">
+                <div class="auction-item-picture-small">
+                    <img src="Sony-WH-1000XM5.jpg" alt="">
+                </div>
+                <div class="auction-item-description-small">
+                    <h1> <a href="auction_view.html">Naziv proizvoda na aukciji</a> </h1>
+                    <p>
+                        <strong>Preostalo vreme: </strong> <span class="aukcija-preostalo-vreme"> dd dana, hh:mm:ss </span>
+                    </p>
+                    <p>
+                        <strong>Trenutna cena: </strong> <span class="aukcija-trenutna-cena"> 2 tokena by <a href="">ime_korisnika</a> </span> 
+                    </p>
+                    <input type="submit" class="biduj-button" value="Biduj">
+                </div>
+            </article>
+
+            <article class="auction-item-small flex row">
+                <div class="auction-item-picture-small">
+                    <img src="item1.jpg" alt="">
+                </div>
+                <div class="auction-item-description-small">
+                    <h1>Naziv proizvoda na aukciji</h1>
+                    <p>
+                        <strong>Preostalo vreme: </strong> <span class="aukcija-preostalo-vreme"> dd dana, hh:mm:ss </span>
+                    </p>
+                    <p>
+                        <strong>Trenutna cena: </strong> <span class="aukcija-trenutna-cena"> 2 tokena by <a href="">ime_korisnika</a> </span> 
+                    </p>
+                    <input type="submit" class="biduj-button" value="Biduj">
+                </div>
+            </article>
+
+            <article class="auction-item-small flex row">
+                <div class="auction-item-picture-small">
+                    <img src="item2.jpg" alt="">
+                </div>
+                <div class="auction-item-description-small">
+                    <h1>Naziv proizvoda na aukciji</h1>
+                    <p>
+                        <strong>Preostalo vreme: </strong> <span class="aukcija-preostalo-vreme"> dd dana, hh:mm:ss </span>
+                    </p>
+                    <p>
+                        <strong>Trenutna cena: </strong> <span class="aukcija-trenutna-cena"> 2 tokena by <a href="">ime_korisnika</a> </span> 
+                    </p>
+                    <input type="submit" class="biduj-button" value="Biduj">
+                </div>
+            </article>
+
+            <article class="auction-item-small flex row">
+                <div class="auction-item-picture-small">
+                    <img src="item3.jpg" alt="">
+                </div>
+                <div class="auction-item-description-small">
+                    <h1>Naziv proizvoda na aukciji</h1>
+                    <p>
+                        <strong>Preostalo vreme: </strong> <span class="aukcija-preostalo-vreme"> dd dana, hh:mm:ss </span>
+                    </p>
+                    <p>
+                        <strong>Trenutna cena: </strong> <span class="aukcija-trenutna-cena"> 2 tokena by <a href="">ime_korisnika</a> </span> 
+                    </p>
+                    <input type="submit" class="biduj-button" value="Biduj">
+                </div>
+            </article>
+
+            <article class="auction-item-small flex row">
+                <div class="auction-item-picture-small">
+                    <img src="item4.jpg" alt="">
+                </div>
+                <div class="auction-item-description-small">
+                    <h1>Naziv proizvoda na aukciji</h1>
+                    <p>
+                        <strong>Preostalo vreme: </strong> <span class="aukcija-preostalo-vreme"> dd dana, hh:mm:ss </span>
+                    </p>
+                    <p>
+                        <strong>Trenutna cena: </strong> <span class="aukcija-trenutna-cena"> 2 tokena by <a href="">ime_korisnika</a> </span> 
+                    </p>
+                    <input type="submit" class="biduj-button" value="Biduj">
+                </div>
+            </article>
+
+            <article class="auction-item-small flex row">
+                <div class="auction-item-picture-small">
+                    <img src="item5.jpg" alt="">
+                </div>
+                <div class="auction-item-description-small">
+                    <h1>Naziv proizvoda na aukciji</h1>
+                    <p>
+                        <strong>Preostalo vreme: </strong> <span class="aukcija-preostalo-vreme"> dd dana, hh:mm:ss </span>
+                    </p>
+                    <p>
+                        <strong>Trenutna cena: </strong> <span class="aukcija-trenutna-cena"> 2 tokena by <a href="">ime_korisnika</a> </span> 
+                    </p>
+                    <input type="submit" class="biduj-button" value="Biduj">
+                </div>
+            </article>
+
+
+
+        </section>
+    </section>
+
+
+    <footer id="main-footer" class="flex column">		
+        <div>
+            <i class="fa-solid fa-map-marker"></i>
+            <span>&nbsp;Adresa organizacije</span>
+        </div>
+        
+        <div>
+            <i class="fa-solid fa-phone"></i>
+            <span>&nbsp;+381 6* *** ** **</span>
+        </div>
+        
+        <div>
+            <i class="fa-solid fa-envelope"></i>
+            <span>&nbsp;kontakt@ebidding.rs</span>
+        </div>
+        <hr>
+        <div id="copyright">© 2023, The Three Musketeers</div>
+    </footer>
+    
+</body>
+</html>

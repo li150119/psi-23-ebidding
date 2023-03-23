@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Roboto:wght@300;500&display=swap" rel="stylesheet"> 
+
+    <script src="https://kit.fontawesome.com/b20461f515.js" crossorigin="anonymous"></script>
+    
+    <title>E-Bidding | Početna</title>
+</head>
+<body class="primary flex column">
+
+    <nav class="flex row space-between" id="main-nav">
+        <div class="logo">
+            <a href="welcome_page.html">E-Bidding</a>
+        </div>
+        <ul class="links flex row no-list-style">
+            <li><a href="welcome_page.html">Početna</a></li>
+            <li><a href="auctions.html">Aukcije</a></li>
+            <li><a href="login.html">Uloguj se</a></li>
+            <li><a href="register.html">Registruj se</a></li>
+        </ul>
+        </div>
+    </nav>
+
+
+    <section id="form-section" class="flex column flex-center main-content">
+        <h1> Registraciona Forma</h1>
+        <form action="" class="flex column flex-center">
+            <div class="form-field">
+                <label for="korisnicko-ime">Korisnicko Ime</label>
+                <input type="text" name="korisnicko-ime" id="korisnicko-ime">
+            </div>
+            <div class="form-field">
+                <label for="lozinka">Email adresa</label>
+                <input type="email" name="email" id="email">
+            </div>
+            <div class="form-field">
+                <label for="lozinka">Lozinka</label>
+                <input type="password" name="lozinka" id="lozinka">
+            </div>
+            <div class="form-field" id="form-submit">
+                <input type="submit" value="Registracija">
+                <div id="potrebna-registracija"> Imate nalog? Kliknite <a href="login.html">ovde.</a></div>
+            </div>
+            
+            
+        </form>
+    </section>
+
+
+    <footer id="main-footer" class="flex column">		
+        <div>
+            <i class="fa-solid fa-map-marker"></i>
+            <span>&nbsp;Adresa organizacije</span>
+        </div>
+        
+        <div>
+            <i class="fa-solid fa-phone"></i>
+            <span>&nbsp;+381 6* *** ** **</span>
+        </div>
+        
+        <div>
+            <i class="fa-solid fa-envelope"></i>
+            <span>&nbsp;kontakt@ebidding.rs</span>
+        </div>
+        <hr>
+        <div id="copyright">© 2023, The Three Musketeers</div>
+    </footer>
+    
+</body>
+</html>

@@ -1,0 +1,395 @@
+:root {
+    --primary: #f5f3ea;
+    --secondary: #f96;
+    --tertiary: #3665f3;
+    --footer: #223;
+    --header-height: 100px;
+    --footer-height: 200px;
+  }
+
+.flex {
+    display: flex;
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.no-list-style {
+    list-style: none;
+}
+
+.primary {
+    background-color: var(--primary);
+}
+
+.secondary {
+    background-color: var(--secondary);
+}
+
+.block {
+    display: block;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+body {
+    margin: 0;
+    font-family: 'DM Sans', sans-serif;
+
+    min-height: 100vh;
+}
+
+#main-nav {
+    height: var(--header-height);
+    margin-left: 10vw;
+    margin-right: 10vw;
+
+    align-items: center;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: black;
+}
+
+#main-nav li:hover {
+    background-color: var(--tertiary);
+    color: azure;
+    
+}
+
+#main-nav a {
+    text-decoration: none;
+    color: inherit;
+    
+}
+
+#main-nav a:hover {
+   
+}
+
+.logo {
+    flex-basis: 200px;
+    font-size: 2rem;
+    margin-left: 2em; 
+    font-weight: 700;
+    
+}
+
+.links {
+    margin-right: 2em;
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+.links li {
+    border-radius: 0.2em;
+    padding: 0.5em 0.75em;
+}
+
+
+#welcome-section {
+    min-height: 60vh;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--secondary);
+}
+
+#welcome-section h1 {
+    font-size: 3rem;
+}
+
+#welcome-section p {
+    font-size: 1.5rem;
+}
+
+#welcome-section .search-form {
+    
+}
+
+#welcome-section .search-form #search-box {
+    padding: 0.5em 1em;
+    font-size: 1.25rem;
+    border: none;
+    border-radius: 0.5em;
+    margin-right: none;
+}
+
+#welcome-section .search-form #submit-button {
+    padding: 0.5em 1em;
+    font-size: 1.25rem;
+
+    color:azure;
+    background-color: var(--tertiary);
+   
+    border: none;
+    border-radius: 0.5em;
+    margin-left: none;
+}
+
+#welcome-section #froots-img {
+    width: 100%;
+}
+
+#main-footer {
+    height: var(--footer-height);
+    background-color: var(--footer);
+    color: beige;
+    align-items: left;
+}
+
+#main-footer div:nth-child(1) {
+    margin-top: 1rem;
+}
+
+#main-footer div {
+    font-size: 0.9rem;
+    margin-left: 3rem;
+    padding: 0.5em;
+}
+
+#main-footer #copyright {
+    margin-left: 3rem;
+    font-size: 0.75em;
+    text-align: center;
+}
+
+#main-footer hr {
+    margin-top: 1rem;
+    height: 2px;
+    width: 95%;
+    background-color: orange;
+}
+
+.main-content {
+    min-height: calc(100vh - var(--header-height) - var(--footer-height));
+    background-color: var(--secondary);
+}
+
+#form-section {
+    flex-grow: 0;
+    
+}
+
+#form-section h1 {
+    margin-top: 2em;
+}
+
+#form-section form {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+    border-radius: 3rem;
+
+    background-color: #ffa375;
+
+    min-height: 400px;
+    min-width: 400px;
+    
+}
+
+.form-field {
+    position: relative;
+}
+
+.form-field label {
+    position: absolute;
+    top: 0em;
+    left: 0em;
+    font-size: 0.85rem;
+    font-weight: 100;
+    text-align: left;
+    
+    
+}
+
+#form-section .form-field input, #form-section textarea {
+    display: block;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    width: 15em;
+
+    border: none;
+    border-radius: 0.5em;
+    padding: 0.25em 0.75em;
+    font-size: 1rem;
+}
+
+#form-section #form-submit {
+    position: relative;
+    text-align: center;
+    margin-top: 0.5em;
+}
+
+#form-section #form-submit input {
+    color: var(--primary);
+    background-color: var(--tertiary);
+    border: none;
+    border-radius: 1em;
+
+    margin-top: 0.5em;
+    padding: 0.5em;
+    width: 8em;
+}
+
+
+#form-section #form-submit input:hover {
+    background-color: cornflowerblue;
+}
+
+#form-section #potrebna-registracija {
+    font-size: 0.75em;
+    position: absolute;
+    top: 5em;
+}
+
+.auction-view {
+    
+    
+    
+}
+
+#all-auction-view {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 900px;
+    margin: 50px auto;
+}
+
+.auction-item {
+    margin: 10%;
+    padding: 3rem 2rem;
+    border: 1px solid var(--footer);
+    border-radius: 4em;
+    background-color: #ffa375;
+}
+
+.auction-item-small {
+    width: 400px;
+    height: 250px;
+    margin: 15px;
+    
+    border-radius: 2em;
+    background-color: #ffa375;
+}
+
+.auction-item-picture {
+    width: 300px;
+    flex-shrink: 0;
+}
+
+.auction-item-picture-small {
+    margin-top: 30px;
+    width: 150px;
+    flex-shrink: 0;
+}
+.auction-item-picture-small img {
+    width: 100%;
+}
+
+.auction-item-description-small {
+    flex-grow: 1;
+    padding: 10px;
+}
+
+.auction-item-picture img {
+    width: 100%;
+}
+
+.auction-item-description {
+    flex-basis: 70%;
+    padding-left: 1em;
+    font-size: 0.9em;
+}
+
+.auction-item-description p {
+    margin-top: 2em;
+}
+
+.biduj-button {
+    color: var(--primary);
+    background-color: var(--tertiary);
+    border: none;
+
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 0.25rem;
+    padding: 0.5em 1em;
+    width: 6em;
+}
+
+.biduj-button:hover {
+    background-color: cornflowerblue;
+}
+
+#auction-search-form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    width: 800px;
+    margin: 50px auto;
+    border: 2px solid var(--footer);
+    border-radius: 2em;
+
+    font-size: 0.9rem;
+}
+
+#auction-search-form h1 {
+    width: 100%;
+    margin: 1em;
+    text-align: center;
+}
+
+.auction-search-form-field {
+    width: 150px;
+    padding-top: 1.25em;
+    margin: 0.5em 0.5em;
+}
+
+.auction-search-form-field input {
+    border: 1px solid var(--footer);
+    border-radius: 0.5em;
+    padding: 2px 3px;
+}
+
+#auction-status-radio {
+    width: 40%;
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.auction-search-button {
+    width: 120px;
+    text-align: center;
+}
+
+.auction-search-button input {
+    width: 100%;
+    padding: 0.25rem;
+    background-color: var(--tertiary);
+    color: var(--primary);
+}
+
+.auction-search-button input:hover {
+    background-color: cornflowerblue;
+}
