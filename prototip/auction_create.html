@@ -1,79 +1,133 @@
+<!-- DOC START -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Roboto:wght@300;500&display=swap" rel="stylesheet"> 
 
     <script src="https://kit.fontawesome.com/b20461f515.js" crossorigin="anonymous"></script>
     
-    <title>E-Bidding | Početna</title>
+    <link rel="stylesheet" href="style.css">
+
+    <title> Korisnik | Kreiranje Aukcije </title>
 </head>
-<body class="primary flex column">
-
-    <nav class="flex row space-between" id="main-nav">
-        <div class="logo">
-            <a href="welcome_page.html">E-Bidding</a>
-        </div>
-        <ul class="links flex row no-list-style">
-            <li><a href="account_setting.html"> <i class="fa-solid fa-gear"></i> Podešavanja Naloga</a></li>
-            <li><a href="auction_create.html"> <i class="fa-solid fa-wand-magic-sparkles"></i> Kreiraj Aukciju</a></li>
-            <li><a href="user_auctions.html"> <i class="fa-solid fa-database"></i> Moje Aukcije</a></li>
-            <li><a href="buy_tokens.html"><i class="fa-solid fa-cart-shopping"></i> Kupovina Tokena </a></li>
-            
-            <li><a href="login.html"><i class="fa-solid fa-door-open"></i> Odjava</a></li>
-            <li><i class="fa-solid fa-user"></i> Pera Perić</li>
-        </ul>
-        </div>
-    </nav>
 
 
-    <section id="form-section" class="flex column flex-center main-content">
+<body class="d-flex flex-column my-bg-secondary">
 
-        <h1>Unesite detalje vase aukcije</h1>
 
-        <form action="user.html" class="flex column flex-center">
+    <!-- HEADER USER -->
+    <header id="header">
+        <div class="px-3 py-4 text-bg-dark">
+            <div class="container">
+              <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="welcome_user.html" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto fs-4 text-white text-decoration-none">
+                  E-Bidding
+                </a>
+      
 
-            <div class="form-field">
-                <label for="naziv-predmeta">Naziv predmeta</label>
-                <input type="text" name="naziv-predmeta" id="naziv-predmeta">
+                <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+
+                  <li class="d-flex align-items-center">
+                    <a href="welcome_user.html" class="nav-link text-white">
+                      Početna
+                    </a>
+                  </li>
+
+                  <li class="d-flex align-items-center">
+                    <div class="dropdown">
+                        <a class="nav-link text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Aukcije
+                        </a>
+                      
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="auctions.html">Sve Aukcije</a></li>
+                            <!-- Aukcije od Interesa su one na kojima ima korisnik ima bid, ili koje je oznacio da su od interesa (posebna funkcionalnost) -->
+                            <li><a class="dropdown-item" href="tracked_auctions.html">Aukcije od Interesa</a></li>
+                            <li><a class="dropdown-item" href="created_auctions.html">Kreirane Aukcije</a></li>
+                            <li><a class="dropdown-item" href="auction_create.html">Kreiraj Aukciju</a></li>
+                        </ul>
+                      </div>
+                  </li>
+
+                  <li class="d-flex align-items-center">
+                    <a href="order_history.html" class="nav-link text-white">
+                      Tokeni
+                    </a>
+                  </li>
+
+                  <li class="d-flex align-items-center">
+                    <a href="user_account.html" class="nav-link text-white">
+                      Korisnički Nalog
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="login.html" class="nav-link text-white">
+                        <button type="button" class="btn btn-warning">Odjava</button>
+                    </a>
+                  </li>
+
+                </ul>
+
+
+              </div>
+            </div>
+          </div>
+    </header>
+
+
+
+
+    <section id="section-main" class="flex-grow-1 d-flex flex-column py-4 my-4">
+        <h2 class="text-center">Unesite detalje vase aukcije</h2>
+
+        <form action="created_auctions.html" class="my-form-400 mx-auto">
+
+            <div class="m-3">
+                <label for="naziv-predmeta" class="form-label">Naziv predmeta</label>
+                <input type="text" class="form-control" name="naziv-predmeta" id="naziv-predmeta">
             </div>
 
-            <div class="form-field">
-                <label for="slika-predmeta">Slika predmeta</label>
-                <input type="file" name="slika-predmeta" id="slika-predmeta">
+            <div class="m-3">
+                <label for="slika-predmeta" class="form-label">Slika predmeta</label>
+                <input type="file" class="form-control" name="slika-predmeta" id="slika-predmeta">
             </div>
 
-            <div class="form-field">
-                <label for="opis-proizvoda">Opis proizvoda</label>
-                <textarea name="opis-proizvoda" id="opis-proizvoda" cols="30" rows="10"></textarea>
+            <div class="m-3">
+                <label for="opis-proizvoda" class="form-label">Opis proizvoda</label>
+                <textarea name="opis-proizvoda" class="form-control" id="opis-proizvoda" cols="30" rows="10"></textarea>
             </div>
 
-            <div class="form-field">
-                <label for="vreme-trajanja">Rok Trajanja</label>
-                <input type="datetime-local" name="vreme-trajanja" id="vreme-trajanja">
+            <div class="m-3">
+                <label for="vreme-trajanja" class="form-label">Rok Trajanja</label>
+                <input type="datetime-local" class="form-control" name="vreme-trajanja" id="vreme-trajanja">
             </div>
 
-            <div class="form-field">
-                <label for="pocetna-cena">Pocetna Cena</label>
-                <input type="number" name="pocetna-cena" id="pocetna-cena">
+            <div class="m-3">
+                <label for="pocetna-cena" class="form-label">Pocetna Cena</label>
+                <input type="number" class="form-control" name="pocetna-cena" id="pocetna-cena">
             </div>
 
-            <div class="form-field" id="form-submit">
-                <input type="submit" value="Kreiraj Aukciju">
+            <div class="mx-3 my-5 text-center">
+                <input type="submit" class="btn btn-dark" value="Kreiraj Aukciju">
             </div>
             
         </form>
-    
     </section>
 
 
-    <footer id="main-footer" class="flex column">		
+
+
+    <footer id="footer" class="d-flex flex-column text-bg-dark mb-0">		
         <div>
             <i class="fa-solid fa-map-marker"></i>
             <span>&nbsp;Adresa organizacije</span>
@@ -91,6 +145,8 @@
         <hr>
         <div id="copyright">© 2023, The Three Musketeers</div>
     </footer>
-    
+
+
+
 </body>
 </html>

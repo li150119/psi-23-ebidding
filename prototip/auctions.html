@@ -1,169 +1,352 @@
+<!-- DOC START -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Roboto:wght@300;500&display=swap" rel="stylesheet"> 
 
     <script src="https://kit.fontawesome.com/b20461f515.js" crossorigin="anonymous"></script>
     
-    <title>E-Bidding | Početna</title>
+    <link rel="stylesheet" href="style.css">
+
+    <title> AUCTIONS </title>
+
+    <style>
+      .card {
+        height: 650px;
+      }
+      .card img {
+        max-height: 350px;
+      }
+    </style>
 </head>
-<body class="primary flex column">
 
-    <nav class="flex row space-between" id="main-nav">
-        <div class="logo">
-            <a href="welcome_page.html">E-Bidding</a>
+
+<body class="d-flex flex-column my-bg-secondary">
+
+
+    <!-- HEADER GUEST -->
+    <header id="header">
+      <div class="px-3 py-4 text-bg-dark">
+        <div class="container">
+          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <a href="welcome_guest.html" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto fs-4 text-white text-decoration-none">
+              E-Bidding
+            </a>
+  
+            <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+              <li class="d-flex align-items-center">
+                <a href="welcome_guest.html" class="nav-link text-white">
+                  Početna
+                </a>
+              </li>
+              <li class="d-flex align-items-center">
+                <a href="auctions.html" class="nav-link text-white">
+                  Aukcije
+                </a>
+              </li>
+              <li>
+                <!-- 
+                 -->
+                <a href="login.html" class="nav-link text-secondary">
+                  <button type="button" class="btn btn-outline-light">Prijava</button>
+                </a>
+              </li>
+              <li>
+                <a href="register.html" class="nav-link text-white">
+                  <button type="button" class="btn btn-warning">Registracija</button>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <ul class="links flex row no-list-style">
-            <li><a href="welcome_page.html">Početna</a></li>
-            <li><a href="auctions.html">Aukcije</a></li>
-            <li><a href="login.html">Uloguj se</a></li>
-            <li><a href="register.html">Registruj se</a></li>
+      </div>
+    </header>
+
+
+    <section id="section-main" class="container-sm mx-auto my-5 flex-grow-1">
+      <h3 class="text-center">Lista aukcija u toku:</h3>
+      
+      
+      <form action="" style="max-width: 600px;" class="mx-auto my-5 ">
+      
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Naziv aukcije</label>
+          <input type="text" class="form-control" id="exampleFormControlInput1">
+        </div>
+      
+        <div class="row">
+          <div class="col">
+            <div class="mb-3">
+              <label for="cena-od" class="form-label">Cena od:</label>
+              <div class="input-group">
+                <span class="input-group-text">$</span>
+                <input type="text" id="cena-od" class="form-control" aria-label="Cena od">
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="mb-3">
+              <label for="cena-do" class="form-label">Cena do:</label>
+              <div class="input-group">
+                <span class="input-group-text">$</span>
+                <input type="text" id="cena-do" class="form-control" aria-label="Cena od">
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="text-center">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+            <label class="form-check-label" for="inlineCheckbox1">Otvorena</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+            <label class="form-check-label" for="inlineCheckbox2">Zavrsena</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+            <label class="form-check-label" for="inlineCheckbox3">Istekla</label>
+          </div>
+        </div>
+      
+        <div class="text-center my-3">
+          <button type="submit" class="btn btn-lg btn-dark mb-3">Filtriraj</button>
+        </div>
+      
+      
+      </form>
+      
+      
+      <div class="row my-5 justify-center">
+      
+        <div class="col">
+          <div class="card" style="width: 20rem;">
+            <img src="img/auction-1.jpg" class="card-img-top" alt="...">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title"> <a href="auction_view.html"> Naziv aukcije </a></h5>
+              <p class="card-text my-3"> Duzi tekst koji opisuje aukciju; Duzi tekst koji opisuje aukciju; Duzi tekst koji
+                opisuje aukciju;</p>
+              <p class="card-text fw-bold my-3">
+                Trenutna cena: XY tokena
+              </p>
+              <div class="text-center mt-auto">
+                <a href="#" class="btn btn-dark text-center">Napravi bid</a>
+              </div>
+            </div>
+            <div class="card-footer text-center text-bg-primary">
+              dd dana, hh:mm:ss
+            </div>
+          </div>
+        </div> <!-- col -->
+      
+        <div class="col">
+          <div class="card" style="width: 20rem;">
+            <img src="img/auction-2.png" class="card-img-top" alt="...">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Naziv aukcije</h5>
+              <p class="card-text my-3"> Duzi tekst koji opisuje aukciju; Duzi tekst koji opisuje aukciju; Duzi tekst koji
+                opisuje aukciju;</p>
+              <p class="card-text fw-bold my-3">
+                Trenutna cena: XY tokena
+              </p>
+              <div class="text-center mt-auto">
+                <a href="#" class="btn btn-dark text-center">Napravi bid</a>
+              </div>
+            </div>
+            <div class="card-footer text-center text-bg-primary">
+              dd dana, hh:mm:ss
+            </div>
+          </div>
+        </div> <!-- col -->
+      
+        <div class="col">
+          <div class="card" style="width: 20rem;">
+            <img src="img/auction-3.jpg" class="card-img-top" alt="...">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Naziv aukcije</h5>
+              <p class="card-text my-3"> Duzi tekst koji opisuje aukciju; Duzi tekst koji opisuje aukciju; Duzi tekst koji
+                opisuje aukciju;</p>
+              <p class="card-text fw-bold my-3">
+                Trenutna cena: XY tokena
+              </p>
+              <div class="text-center mt-auto">
+                <a href="#" class="btn btn-dark text-center">Napravi bid</a>
+              </div>
+            </div>
+            <div class="card-footer text-center text-bg-primary">
+              dd dana, hh:mm:ss
+            </div>
+          </div>
+        </div> <!-- col -->
+      
+      
+      </div> <!-- row -->
+      
+      
+      
+      <div class="row my-5 justify-center">
+      
+        <div class="col">
+          <div class="card" style="width: 20rem;">
+            <img src="img/auction-4.jpg" class="card-img-top" alt="...">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Naziv aukcije</h5>
+              <p class="card-text my-3"> Duzi tekst koji opisuje aukciju; Duzi tekst koji opisuje aukciju; Duzi tekst koji
+                opisuje aukciju;</p>
+              <p class="card-text fw-bold my-3">
+                Trenutna cena: XY tokena
+              </p>
+              <div class="text-center mt-auto">
+                <a href="#" class="btn btn-dark text-center">Napravi bid</a>
+              </div>
+            </div>
+            <div class="card-footer text-center text-bg-primary">
+              dd dana, hh:mm:ss
+            </div>
+          </div>
+        </div> <!-- col -->
+      
+      
+        <div class="col">
+          <div class="card" style="width: 20rem;">
+            <img src="img/auction-5.jpg" class="card-img-top" alt="...">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Naziv aukcije</h5>
+              <p class="card-text my-3"> Duzi tekst koji opisuje aukciju; Duzi tekst koji opisuje aukciju; Duzi tekst koji
+                opisuje aukciju;</p>
+              <p class="card-text fw-bold my-3">
+                Trenutna cena: XY tokena
+              </p>
+              <div class="text-center mt-auto">
+                <a href="#" class="btn btn-dark text-center">Napravi bid</a>
+              </div>
+            </div>
+            <div class="card-footer text-center text-bg-primary">
+              dd dana, hh:mm:ss
+            </div>
+          </div>
+        </div> <!-- col -->
+      
+      
+        <div class="col">
+          <div class="card" style="width: 20rem;">
+            <img src="img/auction-6.webp" class="card-img-top" alt="...">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Naziv aukcije</h5>
+              <p class="card-text my-3"> Duzi tekst koji opisuje aukciju; Duzi tekst koji opisuje aukciju; Duzi tekst koji
+                opisuje aukciju;</p>
+              <p class="card-text fw-bold my-3">
+                Trenutna cena: XY tokena
+              </p>
+              <div class="text-center mt-auto">
+                <a href="#" class="btn btn-dark text-center">Napravi bid</a>
+              </div>
+            </div>
+            <div class="card-footer text-center text-bg-primary">
+              dd dana, hh:mm:ss
+            </div>
+          </div>
+        </div> <!-- col -->
+      
+      </div> <!-- row -->
+      
+      
+      
+      <div class="row my-5 justify-center">
+      
+        <div class="col">
+          <div class="card" style="width: 20rem;">
+            <img src="img/auction-7.jpg" class="card-img-top" alt="...">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Naziv aukcije</h5>
+              <p class="card-text my-3"> Duzi tekst koji opisuje aukciju; Duzi tekst koji opisuje aukciju; Duzi tekst koji
+                opisuje aukciju;</p>
+              <p class="card-text fw-bold my-3">
+                Trenutna cena: XY tokena
+              </p>
+              <div class="text-center mt-auto">
+                <a href="#" class="btn btn-dark text-center">Napravi bid</a>
+              </div>
+            </div>
+            <div class="card-footer text-center text-bg-primary">
+              dd dana, hh:mm:ss
+            </div>
+          </div>
+        </div> <!-- col -->
+      
+      
+        <div class="col">
+          <div class="card" style="width: 20rem;">
+            <img src="img/auction-8.jpg" class="card-img-top" alt="...">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Naziv aukcije</h5>
+              <p class="card-text my-3"> Duzi tekst koji opisuje aukciju; Duzi tekst koji opisuje aukciju; Duzi tekst koji
+                opisuje aukciju;</p>
+              <p class="card-text fw-bold my-3">
+                Trenutna cena: XY tokena
+              </p>
+              <div class="text-center mt-auto">
+                <a href="#" class="btn btn-dark text-center">Napravi bid</a>
+              </div>
+            </div>
+            <div class="card-footer text-center text-bg-primary">
+              dd dana, hh:mm:ss
+            </div>
+          </div>
+        </div> <!-- col -->
+      
+      
+        <div class="col">
+          <div class="card" style="width: 20rem;">
+            <img src="img/auction-9.webp" class="card-img-top" alt="...">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Naziv aukcije</h5>
+              <p class="card-text my-3"> Duzi tekst koji opisuje aukciju; Duzi tekst koji opisuje aukciju; Duzi tekst koji
+                opisuje aukciju;</p>
+              <p class="card-text fw-bold my-3">
+                Trenutna cena: XY tokena
+              </p>
+              <div class="text-center mt-auto">
+                <a href="#" class="btn btn-dark text-center">Napravi bid</a>
+              </div>
+            </div>
+            <div class="card-footer text-center text-bg-primary">
+              dd dana, hh:mm:ss
+            </div>
+          </div>
+        </div> <!-- col -->
+      
+      
+      </div> <!-- row -->
+      
+      
+      
+      
+      <nav aria-label="Page navigation example" class="my-5">
+        <ul class="pagination justify-content-center">
+          <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+          <li class="page-item"><a class="page-link active" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item"><a class="page-link" href="#">Next</a></li>
         </ul>
-        </div>
-    </nav>
+      </nav>
 
-
-    <section class="main-content">
-
-        <form action="auctions.html" id="auction-search-form">
-            <h1>Pretraga Aukcija</h1>
-            <div class="auction-search-form-field form-field">
-                <label for="">Naziv Artikla</label>
-                <input type="text">
-            </div>
-            <div class="auction-search-form-field form-field">
-                <label for="">Cena Od</label>
-                <input type="text" name="" id="">
-            </div>
-            <div class="auction-search-form-field form-field">
-                <label for="">Cena Do</label>
-                <input type="text">
-            </div>
-            <div class="auction-search-form-field" id="auction-status-radio">
-                <label for="open">Otvorena</label>
-                <input type="radio" name="auction-status" id="open" value="open">
-                <label for="closed">Zavrsena</label>
-                <input type="radio" name="auction-status" id="closed" value="closed">
-                <label for="expired">Istekla</label>
-                <input type="radio" name="auction-status" id="expired" value="expired">
-            </div>
-            <div class="auction-search-form-field auction-search-button">
-                <input type="submit" value="Primeni">
-            </div>
-        </form>
-
-        <section id="all-auction-view" class="flex row">
-
-            <article class="auction-item-small flex row">
-                <div class="auction-item-picture-small">
-                    <img src="Sony-WH-1000XM5.jpg" alt="">
-                </div>
-                <div class="auction-item-description-small">
-                    <h1> <a href="auction_view.html">Naziv proizvoda na aukciji</a> </h1>
-                    <p>
-                        <strong>Preostalo vreme: </strong> <span class="aukcija-preostalo-vreme"> dd dana, hh:mm:ss </span>
-                    </p>
-                    <p>
-                        <strong>Trenutna cena: </strong> <span class="aukcija-trenutna-cena"> 2 tokena by <a href="">ime_korisnika</a> </span> 
-                    </p>
-                    <input type="submit" class="biduj-button" value="Biduj">
-                </div>
-            </article>
-
-            <article class="auction-item-small flex row">
-                <div class="auction-item-picture-small">
-                    <img src="item1.jpg" alt="">
-                </div>
-                <div class="auction-item-description-small">
-                    <h1>Naziv proizvoda na aukciji</h1>
-                    <p>
-                        <strong>Preostalo vreme: </strong> <span class="aukcija-preostalo-vreme"> dd dana, hh:mm:ss </span>
-                    </p>
-                    <p>
-                        <strong>Trenutna cena: </strong> <span class="aukcija-trenutna-cena"> 2 tokena by <a href="">ime_korisnika</a> </span> 
-                    </p>
-                    <input type="submit" class="biduj-button" value="Biduj">
-                </div>
-            </article>
-
-            <article class="auction-item-small flex row">
-                <div class="auction-item-picture-small">
-                    <img src="item2.jpg" alt="">
-                </div>
-                <div class="auction-item-description-small">
-                    <h1>Naziv proizvoda na aukciji</h1>
-                    <p>
-                        <strong>Preostalo vreme: </strong> <span class="aukcija-preostalo-vreme"> dd dana, hh:mm:ss </span>
-                    </p>
-                    <p>
-                        <strong>Trenutna cena: </strong> <span class="aukcija-trenutna-cena"> 2 tokena by <a href="">ime_korisnika</a> </span> 
-                    </p>
-                    <input type="submit" class="biduj-button" value="Biduj">
-                </div>
-            </article>
-
-            <article class="auction-item-small flex row">
-                <div class="auction-item-picture-small">
-                    <img src="item3.jpg" alt="">
-                </div>
-                <div class="auction-item-description-small">
-                    <h1>Naziv proizvoda na aukciji</h1>
-                    <p>
-                        <strong>Preostalo vreme: </strong> <span class="aukcija-preostalo-vreme"> dd dana, hh:mm:ss </span>
-                    </p>
-                    <p>
-                        <strong>Trenutna cena: </strong> <span class="aukcija-trenutna-cena"> 2 tokena by <a href="">ime_korisnika</a> </span> 
-                    </p>
-                    <input type="submit" class="biduj-button" value="Biduj">
-                </div>
-            </article>
-
-            <article class="auction-item-small flex row">
-                <div class="auction-item-picture-small">
-                    <img src="item4.jpg" alt="">
-                </div>
-                <div class="auction-item-description-small">
-                    <h1>Naziv proizvoda na aukciji</h1>
-                    <p>
-                        <strong>Preostalo vreme: </strong> <span class="aukcija-preostalo-vreme"> dd dana, hh:mm:ss </span>
-                    </p>
-                    <p>
-                        <strong>Trenutna cena: </strong> <span class="aukcija-trenutna-cena"> 2 tokena by <a href="">ime_korisnika</a> </span> 
-                    </p>
-                    <input type="submit" class="biduj-button" value="Biduj">
-                </div>
-            </article>
-
-            <article class="auction-item-small flex row">
-                <div class="auction-item-picture-small">
-                    <img src="item5.jpg" alt="">
-                </div>
-                <div class="auction-item-description-small">
-                    <h1>Naziv proizvoda na aukciji</h1>
-                    <p>
-                        <strong>Preostalo vreme: </strong> <span class="aukcija-preostalo-vreme"> dd dana, hh:mm:ss </span>
-                    </p>
-                    <p>
-                        <strong>Trenutna cena: </strong> <span class="aukcija-trenutna-cena"> 2 tokena by <a href="">ime_korisnika</a> </span> 
-                    </p>
-                    <input type="submit" class="biduj-button" value="Biduj">
-                </div>
-            </article>
-
-
-
-        </section>
     </section>
 
 
-    <footer id="main-footer" class="flex column">		
+
+    <footer id="footer" class="d-flex flex-column text-bg-dark mb-0">		
         <div>
             <i class="fa-solid fa-map-marker"></i>
             <span>&nbsp;Adresa organizacije</span>
@@ -181,6 +364,8 @@
         <hr>
         <div id="copyright">© 2023, The Three Musketeers</div>
     </footer>
-    
+
+
+
 </body>
 </html>

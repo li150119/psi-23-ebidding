@@ -4,75 +4,108 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Roboto:wght@300;500&display=swap" rel="stylesheet"> 
 
     <script src="https://kit.fontawesome.com/b20461f515.js" crossorigin="anonymous"></script>
-    
-    <title>E-Bidding | Početna</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <title> Registracija </title>
+
 </head>
-<body class="primary flex column">
 
-    <nav class="flex row space-between" id="main-nav">
-        <div class="logo">
-            <a href="welcome_page.html">E-Bidding</a>
+
+<body class="d-flex flex-column my-bg-secondary">
+
+  
+    <!-- HEADER GUEST -->
+    <header id="header">
+      <div class="px-3 py-4 text-bg-dark">
+        <div class="container">
+          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <a href="welcome_guest.html" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto fs-4 text-white text-decoration-none">
+              E-Bidding
+            </a>
+  
+            <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+              <li class="d-flex align-items-center">
+                <a href="welcome_guest.html" class="nav-link text-white">
+                  Početna
+                </a>
+              </li>
+              <li class="d-flex align-items-center">
+                <a href="auctions.html" class="nav-link text-white">
+                  Aukcije
+                </a>
+              </li>
+              <li>
+                <!-- 
+                 -->
+                <a href="login.html" class="nav-link text-secondary">
+                  <button type="button" class="btn btn-outline-light">Prijava</button>
+                </a>
+              </li>
+              <li>
+                <a href="register.html" class="nav-link text-white">
+                  <button type="button" class="btn btn-warning">Registracija</button>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <ul class="links flex row no-list-style">
-            <li><a href="welcome_page.html">Početna</a></li>
-            <li><a href="auctions.html">Aukcije</a></li>
-            <li><a href="login.html">Uloguj se</a></li>
-            <li><a href="register.html">Registruj se</a></li>
-        </ul>
-        </div>
-    </nav>
+      </div>
+    </header>
 
 
-    <section id="form-section" class="flex column flex-center main-content">
-        <h1> Registraciona Forma</h1>
-        <form action="" class="flex column flex-center">
-            <div class="form-field">
-                <label for="korisnicko-ime">Korisnicko Ime</label>
-                <input type="text" name="korisnicko-ime" id="korisnicko-ime">
+    <div class="container-sm my-5 py-5 flex-grow-1">
+        <h2 class="my-4 text-center">Registraciona forma</h2>
+        <form class="my-form-400 mx-auto p-3" action="login.html">
+            <div class="mb-3">
+              <label for="inputUsername" class="form-label">Korisnicko ime</label>
+              <input type="text" class="form-control" id="inputUsername">
             </div>
-            <div class="form-field">
-                <label for="lozinka">Email adresa</label>
-                <input type="email" name="email" id="email">
+            <div class="mb-3">
+                <label for="inputEmail" class="form-label">Email adresa</label>
+                <input type="email" class="form-control" id="inputEmail">
+              </div>
+            <div class="mb-3">
+              <label for="inputPassword" class="form-label">Lozinka</label>
+              <input type="password" class="form-control" id="inputPassword">
             </div>
-            <div class="form-field">
-                <label for="lozinka">Lozinka</label>
-                <input type="password" name="lozinka" id="lozinka">
+            <div class="text-center mt-5">
+                <button type="submit" class="btn btn-dark">Registracija</button>
+                <p class="my-2 form-text">Imate nalog? Kliknite <a href="login.html" class="text-reset">ovde.</a></p>
             </div>
-            <div class="form-field" id="form-submit">
-                <input type="submit" value="Registracija">
-                <div id="potrebna-registracija"> Imate nalog? Kliknite <a href="login.html">ovde.</a></div>
-            </div>
-            
-            
-        </form>
-    </section>
+          </form>
+    </div>
 
-
-    <footer id="main-footer" class="flex column">		
-        <div>
-            <i class="fa-solid fa-map-marker"></i>
-            <span>&nbsp;Adresa organizacije</span>
-        </div>
-        
-        <div>
-            <i class="fa-solid fa-phone"></i>
-            <span>&nbsp;+381 6* *** ** **</span>
-        </div>
-        
-        <div>
-            <i class="fa-solid fa-envelope"></i>
-            <span>&nbsp;kontakt@ebidding.rs</span>
-        </div>
-        <hr>
-        <div id="copyright">© 2023, The Three Musketeers</div>
-    </footer>
     
+    <footer id="footer" class="d-flex flex-column text-bg-dark mb-0">		
+      <div>
+          <i class="fa-solid fa-map-marker"></i>
+          <span>&nbsp;Adresa organizacije</span>
+      </div>
+      
+      <div>
+          <i class="fa-solid fa-phone"></i>
+          <span>&nbsp;+381 6* *** ** **</span>
+      </div>
+      
+      <div>
+          <i class="fa-solid fa-envelope"></i>
+          <span>&nbsp;kontakt@ebidding.rs</span>
+      </div>
+      <hr>
+      <div id="copyright">© 2023, The Three Musketeers</div>
+  </footer>
+    
+
+
 </body>
 </html>

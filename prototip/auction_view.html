@@ -4,66 +4,103 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Roboto:wght@300;500&display=swap" rel="stylesheet"> 
 
     <script src="https://kit.fontawesome.com/b20461f515.js" crossorigin="anonymous"></script>
     
-    <title>E-Bidding | Početna</title>
+    <link rel="stylesheet" href="style.css">
+
+    <title> Pregled Aukcije </title>
 </head>
-<body class="primary flex column">
 
-    <nav class="flex row space-between" id="main-nav">
-        <div class="logo">
-            <a href="welcome_page.html">E-Bidding</a>
+
+<body class="d-flex flex-column my-bg-secondary">
+
+
+    <!-- HEADER GUEST -->
+    <header id="header">
+      <div class="px-3 py-4 text-bg-dark">
+        <div class="container">
+          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <a href="welcome_guest.html" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto fs-4 text-white text-decoration-none">
+              E-Bidding
+            </a>
+  
+            <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+              <li class="d-flex align-items-center">
+                <a href="welcome_guest.html" class="nav-link text-white">
+                  Početna
+                </a>
+              </li>
+              <li class="d-flex align-items-center">
+                <a href="auctions.html" class="nav-link text-white">
+                  Aukcije
+                </a>
+              </li>
+              <li>
+                <!-- 
+                 -->
+                <a href="login.html" class="nav-link text-secondary">
+                  <button type="button" class="btn btn-outline-light">Prijava</button>
+                </a>
+              </li>
+              <li>
+                <a href="register.html" class="nav-link text-white">
+                  <button type="button" class="btn btn-warning">Registracija</button>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <ul class="links flex row no-list-style">
-            <li><a href="welcome_page.html">Početna</a></li>
-            <li><a href="auctions.html">Aukcije</a></li>
-            <li><a href="login.html">Uloguj se</a></li>
-            <li><a href="register.html">Registruj se</a></li>
-        </ul>
-        </div>
-    </nav>
+      </div>
+    </header>
 
 
-    <section id="auction-view" class="main-content">
-        <article class="auction-item flex row">
-            <div class="auction-item-picture">
-                <img src="Sony-WH-1000XM5.jpg" alt="">
+    <section id="section-main" class="flex-grow-1 container my-5">
+            <h2 class="text-center my-4">Pregled pojedinacne aukcije</h2>
+            <div class="row align-items-center justify-content-center my-4">
+                <div class="col-4">
+                    <div class="card" style="width: 30rem;">
+                        <img src="img/auction-1.jpg" class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Naziv aukcije</h5>
+                            <p><strong>Datum kreiranja aukcije: </strong> yyyy-mm-dd hh-mm-ss </p>
+                            <p class="card-text my-3"> 
+                              Duzi tekst koji opisuje aukciju; Duzi tekst koji opisuje aukciju; 
+                              Duzi tekst koji opisuje aukciju; Duzi tekst koji opisuje aukciju;
+                              Duzi tekst koji opisuje aukciju; Duzi tekst koji opisuje aukciju;
+                              Duzi tekst koji opisuje aukciju; Duzi tekst koji opisuje aukciju;
+                              Duzi tekst koji opisuje aukciju; Duzi tekst koji opisuje aukciju;
+                              Duzi tekst koji opisuje aukciju; Duzi tekst koji opisuje aukciju;
+                              Duzi tekst koji opisuje aukciju; Duzi tekst koji opisuje aukciju;
+                              Duzi tekst koji opisuje aukciju; Duzi tekst koji opisuje aukciju;
+                              Duzi tekst koji opisuje aukciju; Duzi tekst koji opisuje aukciju;
+                              Duzi tekst koji opisuje aukciju; Duzi tekst koji opisuje aukciju;
+                            </p>
+                            <p class="card-text fw-bold my-3">
+                                Trenutna cena: XY tokena
+                            </p>
+                            <div class="text-center mt-auto">
+                                <a href="#" class="btn btn-dark text-center">Napravi bid</a>
+                            </div>
+                        </div>
+                        <div class="card-footer text-center text-bg-primary">
+                            dd dana, hh:mm:ss
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="auction-item-description">
-                <h1>Naziv proizvoda na aukciji</h1>
-                <p>
-                    <strong>Deskripcija:</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Voluptatibus accusamus beatae amet repellendus placeat exercitationem nihil, 
-                    veniam aspernatur quaerat totam molestias, quam eos tenetur quis aliquam? 
-                    Accusamus esse beatae animi!
-                </p>
-                <p>
-                    <strong>Datum kreiranja: </strong> <span class="datum-kreiranja-aukcije">2023-03-23 hh:mm:ss</span>
-                </p>
-                <p>
-                    <strong>Preostalo vreme: </strong> <span class="aukcija-preostalo-vreme"> dd dana, hh:mm:ss </span>
-                </p>
-                <p>
-                    <strong>Status aukcije: </strong> <span class="aukcija-status"> OPEN | EXPIRED | FINISHED </span> 
-                </p>
-
-                <p>
-                    <strong>Trenutna cena: </strong> <span class="aukcija-trenutna-cena"> 2 tokena by <a href="">ime_korisnika</a> </span> 
-                </p>
-                <input type="submit" class="biduj-button" value="Biduj">
-
-            </div>
-        </article>
     </section>
 
 
-    <footer id="main-footer" class="flex column">		
+
+    <footer id="footer" class="d-flex flex-column text-bg-dark mb-0">		
         <div>
             <i class="fa-solid fa-map-marker"></i>
             <span>&nbsp;Adresa organizacije</span>
@@ -81,6 +118,8 @@
         <hr>
         <div id="copyright">© 2023, The Three Musketeers</div>
     </footer>
-    
+
+
+
 </body>
 </html>
